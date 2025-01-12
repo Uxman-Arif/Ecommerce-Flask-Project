@@ -28,6 +28,16 @@ class Product(db.Model):
 def index():
     return render_template('index.html')
 
+@app.route('/add', methods=['GET', 'POST'])
+def addproduct():
+    # if request.method=='POST':
+    print('yes here')
+    prod = request.form.get('prod')
+    description = request.form.get('description')
+    price = request.form.get('price')
+    file = request.files.get('Picture')
+    print(prod, description, price, file)
+    return render_template('addproduct.html')
 
 admin = Admin(app, name='My Admin', template_mode='bootstrap3')
 admin.add_view(ModelView(Product, db.session))
