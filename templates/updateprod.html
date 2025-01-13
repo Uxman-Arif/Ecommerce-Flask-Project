@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="text-center text-success font-bold border mt-5">Update Product!</h1>
+            <div class="col-9 border p-4 m-2 text-center">
+                <form action="" method="post" enctype="multipart/form-data">
+                    Product Name: <input type="text" name="prod" id="" value='{{prod.name}}'><br>
+                    Product Description: <input type="text" name="description" id="" value='{{prod.description}}'><br>
+                    Product Price: <input type="number" name="price" id="" value='{{prod.price}}'><br>
+                    Product <Picture></Picture>: <input type="file" name="Picture" id=""><br>
+                    <button type="submit" class="btn btn-primary">Update!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
